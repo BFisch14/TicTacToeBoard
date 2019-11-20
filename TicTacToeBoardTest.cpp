@@ -20,10 +20,10 @@ TEST(toggleTurn, xTurn)
   ASSERT_EQ(ticTac.toggleTurn(), X);
 }
 
-TEST(toggleTurn, yTurn)
+TEST(toggleTurn, oTurn)
 {
   TicTacToeBoard ticTac;
-  ASSERT_EQ(ticTac.toggleTurn(), Y);
+  ASSERT_EQ(ticTac.toggleTurn(), O);
 }
 
 /* EXAMPLE TEST FORMAT
