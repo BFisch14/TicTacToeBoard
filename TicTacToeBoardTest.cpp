@@ -17,6 +17,7 @@ class TicTacToeBoardTest : public ::testing::Test
 TEST(toggleTurn, xTurn)
 {
   TicTacToeBoard ticTac;
+	ticTac.toggleTurn();
   ASSERT_EQ(ticTac.toggleTurn(), X);
 }
 
@@ -25,6 +26,12 @@ TEST(toggleTurn, oTurn)
   TicTacToeBoard ticTac;
   ASSERT_EQ(ticTac.toggleTurn(), O);
 }
+TEST(getPiece, invalid)
+{
+	TicTacToeBoard ticTac;
+	ASSERT_EQ(ticTac.getPiece(-9, 7), Invalid);
+}
+
 
 /* EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, unitTestName)
