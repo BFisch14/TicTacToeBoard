@@ -81,6 +81,7 @@ Piece TicTacToeBoard::getPiece(int row, int column)
 **/
 Piece TicTacToeBoard::getWinner()
 {
+  //bool boardCheck = false;
   for (int i = 0; i <= 2; i++)
   {
     if ((board[i][0] == board[i][1]) && (board[i][0] == board[i][2]))
@@ -104,9 +105,21 @@ Piece TicTacToeBoard::getWinner()
     return board[0][2];
   }
 
-  else
+
+  for (int i = 0; i <= 2; i++)
   {
-    return Invalid;
+    for (int j = 0; j <= 2; j++)
+    {
+      if (board[i][j] == Blank)
+      {
+        return Invalid;
+      }
+      else
+      {
+        return Blank;
+      }
+    }
   }
+
 
 }
