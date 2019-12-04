@@ -103,7 +103,7 @@ TEST(getWinner, oWinsColumn)
 	TicTacToeBoard ticTac;
 	ticTac.placePiece(1, 0);
 	ticTac.placePiece(0, 0);
-	ticTac.placePiece(0, 1);
+	ticTac.placePiece(1, 1);
 	ticTac.placePiece(0, 1);
 	ticTac.placePiece(1, 0);
 	ticTac.placePiece(0, 2);
