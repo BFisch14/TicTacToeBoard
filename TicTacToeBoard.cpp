@@ -114,12 +114,9 @@ Piece TicTacToeBoard::getWinner()
       {
         return Invalid;
       }
-      else
-      {
-        return Blank;
-      }
     }
   }
+  return Blank;
 
 
 }
