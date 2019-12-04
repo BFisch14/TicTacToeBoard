@@ -108,7 +108,7 @@ TEST(getWinner, oWinsColumn)
 	ticTac.placePiece(1, 0);
 	ticTac.placePiece(0, 2);
 
-	ASSERT_EQ(ticTac.getWinner(), X);
+	ASSERT_EQ(ticTac.getWinner(), O);
 }
 
 
