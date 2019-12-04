@@ -57,6 +57,24 @@ TEST(placePiece, valid)
 	ASSERT_EQ(ticTac.placePiece(1, 2), X);
 }
 
+TEST(placePiece, validO)
+{
+	TicTacToeBoard ticTac;
+	ticTac.placePiece(1, 2);
+	ASSERT_EQ(ticTac.placePiece(1, 1), O);
+}
+
+TEST(getWinner, Xwins)
+{
+	TicTacToeBoard ticTac;
+	ticTac.placePiece(1, 0);
+	ticTac.placePiece(2, 0);
+	ticTac.placePiece(1, 1);
+	ticTac.placePiece(2, 2);
+	ticTac.placePiece(1, 2);
+	ASSERT_EQ(ticTac.getWinner(), X);
+}
+
 
 /* EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, unitTestName)
