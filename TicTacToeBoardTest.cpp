@@ -48,8 +48,13 @@ TEST(getPiece, valid)
 TEST(placePiece, Invalid)
 {
 	TicTacToeBoard ticTac;
-	ASSERT_EQ(ticTac.placePiece(-8, 9);, Invalid);
+	ASSERT_EQ(ticTac.placePiece(-8, 9), Invalid);
+}
 
+TEST(placePiece, valid)
+{
+	TicTacToeBoard ticTac;
+	ASSERT_EQ(ticTac.placePiece(1, 2), X);
 }
 
 
