@@ -64,7 +64,7 @@ TEST(placePiece, validO)
 	ASSERT_EQ(ticTac.placePiece(1, 1), O);
 }
 
-TEST(getWinner, XwinsColumn)
+TEST(getWinner, xWinsColumn)
 {
 	TicTacToeBoard ticTac;
 	ticTac.placePiece(1, 0);
@@ -72,6 +72,17 @@ TEST(getWinner, XwinsColumn)
 	ticTac.placePiece(1, 1);
 	ticTac.placePiece(2, 2);
 	ticTac.placePiece(0, 0);
+	ASSERT_EQ(ticTac.getWinner(), X);
+}
+
+TEST(getWinner, xWinsRow)
+{
+	TicTacToeBoard ticTac;
+	ticTac.placePiece(0, 0);
+	ticTac.placePiece(2, 0);
+	ticTac.placePiece(0, 1);
+	ticTac.placePiece(2, 2);
+	ticTac.placePiece(0, 2);
 	ASSERT_EQ(ticTac.getWinner(), X);
 }
 

@@ -90,7 +90,7 @@ Piece TicTacToeBoard::getWinner()
         return board[i][0];
       }
     }
-    else if (board[0][i] != Blank)
+    if (board[0][i] != Blank)
     {
       if ((board[0][i] == board[1][i])  && (board[0][i] == board[2][i]))
       {
