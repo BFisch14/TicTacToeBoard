@@ -32,6 +32,27 @@ TEST(getPiece, invalid)
 	ASSERT_EQ(ticTac.getPiece(-9, 7), Invalid);
 }
 
+TEST(getPiece, empty)
+{
+	TicTacToeBoard ticTac;
+	ASSERT_EQ(ticTac.getPiece(0, 0), Blank);
+}
+
+TEST(getPiece, valid)
+{
+	TicTacToeBoard ticTac;
+	ticTac.placePiece(0, 0);
+	ASSERT_EQ(ticTac.getPiece(0, 0), X);
+}
+
+TEST(placePiece, Invalid)
+{
+	TicTacToeBoard ticTac;
+	ticTac.placePiece(-8, 9);
+	ASSERT_EQ(ticTac.getPiece(0, 0), Invalid);
+
+}
+
 
 /* EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, unitTestName)
