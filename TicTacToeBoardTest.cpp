@@ -64,16 +64,17 @@ TEST(placePiece, validO)
 	ASSERT_EQ(ticTac.placePiece(1, 1), O);
 }
 
-TEST(getWinner, Xwins)
+TEST(getWinner, XwinsColumn)
 {
 	TicTacToeBoard ticTac;
 	ticTac.placePiece(1, 0);
 	ticTac.placePiece(2, 0);
 	ticTac.placePiece(1, 1);
 	ticTac.placePiece(2, 2);
-	ticTac.placePiece(1, 2);
+	ticTac.placePiece(0, 0);
 	ASSERT_EQ(ticTac.getWinner(), X);
 }
+
 
 
 /* EXAMPLE TEST FORMAT
