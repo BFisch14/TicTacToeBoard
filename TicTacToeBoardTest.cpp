@@ -121,6 +121,17 @@ TEST(getWinner, xDiagonal)
 	ASSERT_EQ(ticTac.getWinner(), X);
 }
 
+TEST(getWinner, xDiagonal2)
+{
+	TicTacToeBoard ticTac;
+	ticTac.placePiece(0, 2);
+	ticTac.placePiece(1, 0);
+	ticTac.placePiece(1, 1);
+	ticTac.placePiece(0, 1);
+	ticTac.placePiece(2, 0);
+	ASSERT_EQ(ticTac.getWinner(), X);
+}
+
 
 
 /* EXAMPLE TEST FORMAT
